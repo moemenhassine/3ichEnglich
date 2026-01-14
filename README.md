@@ -1,6 +1,15 @@
-# Welcome to your Expo app 👋
+# Welcome to 3ich-english app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native application built with Expo, featuring internationalization (i18n), theme management, and a clean component architecture.
+
+## Features
+
+- 🌍 **Internationalization (i18n)** - Support for English, French, and Arabic
+- 🎨 **Theme Management** - Light, Dark, and System theme modes
+- 📱 **Cross-platform** - iOS, Android, and Web support
+- 🧩 **Component Architecture** - Organized components by type (layout, UI, cards)
+- ⚡ **TypeScript** - Full type safety
+- 🎯 **Expo Router** - File-based routing
 
 ## Get started
 
@@ -23,28 +32,91 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Documentation
 
-## Get a fresh project
+- [Theme System Guide](./THEME_GUIDE.md) - Learn how to customize themes and colors
+- [i18n Documentation](./i18n/README.md) - Internationalization setup and usage
 
-When you're ready, run:
 
-```bash
-npm run reset-project
+## Project Structure
+
+```
+3ichEnglich/
+├── app/                          # Application screens and routing (Expo Router)
+│   ├── _layout.tsx              # Root layout component
+│   ├── modal.tsx                # Modal screen
+│   └── (tabs)/                  # Tab navigation group
+│       ├── _layout.tsx          # Tab layout configuration
+│       ├── index.tsx            # Home tab screen
+│       └── explore.tsx          # Explore tab screen
+│
+├── assets/                       # Static assets
+│   ├── animations/              # Animation files
+│   ├── fonts/                   # Custom fonts
+│   ├── icons/                   # Icon assets
+│   │   ├── png/                 # PNG icons
+│   │   └── svg/                 # SVG icons
+│   └── images/                  # Image assets
+│       ├── icon.png
+│       ├── splash-icon.png
+│       └── ...
+│
+├── components/                   # Reusable React components
+│   ├── cards/                   # Card components
+│   ├── layout/                  # Layout components
+│   │   └── parallax-scroll-view.tsx
+│   └── ui/                      # UI components
+│       ├── haptic-tab.tsx       # Tab button with haptic feedback
+│       ├── icon-symbol.tsx      # Icon component
+│       ├── icon-symbol.ios.tsx  # iOS icon component
+│       ├── language-selector.tsx # Language selector
+│       ├── theme-switcher.tsx   # Theme switcher
+│       ├── themed-text.tsx      # Themed text component
+│       └── themed-view.tsx      # Themed view component
+│
+├── constants/                    # Application constants
+│   └── theme.ts                 # Theme configuration and colors
+│
+├── context/                      # React Context providers
+│   ├── I18nContext.tsx          # Internationalization context
+│   └── ThemeContext.tsx         # Theme management context
+│
+├── hooks/                        # Custom React hooks
+│   ├── use-color-scheme.ts      # Color scheme hook
+│   ├── use-color-scheme.web.ts  # Web color scheme hook
+│   ├── use-theme.ts             # Theme hook
+│   ├── use-theme-color.ts       # Theme color hook
+│   └── use-translation.ts       # Translation hook
+│
+├── i18n/                         # Internationalization
+│   ├── index.ts                 # i18n configuration
+│   ├── README.md                # i18n documentation
+│   └── locales/                 # Translation files
+│       ├── ar/                  # Arabic translations
+│       │   └── translation.json
+│       ├── en/                  # English translations
+│       │   └── translation.json
+│       └── fr/                  # French translations
+│           └── translation.json
+│
+├── services/                     # API services and business logic
+│
+├── store/                        # State management (Redux/Zustand/etc.)
+│
+├── types/                        # TypeScript type definitions
+│
+├── utils/                        # Utility functions
+│
+├── validation/                   # Form validation schemas
+│
+├── app.json                      # Expo configuration
+├── package.json                  # Dependencies and scripts
+├── tsconfig.json                 # TypeScript configuration
+├── eslint.config.js              # ESLint configuration
+├── expo-env.d.ts                 # Expo TypeScript definitions
+├── THEME_GUIDE.md                # Theme system documentation
+└── README.md                     # Project documentation
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.

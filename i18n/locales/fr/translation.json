@@ -1,0 +1,27 @@
+{
+  "common": {
+    "welcome": "Bienvenue",
+    "home": "Accueil",
+    "explore": "Explorer",
+    "settings": "Paramètres",
+    "language": "Langue",
+    "theme": "Thème",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "ok": "OK",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "tabs": {
+    "home": "Accueil",
+    "explore": "Explorer"
+  },
+  "home": {
+    "title": "Bienvenue sur 3ich-english",
+    "subtitle": "Commencez à apprendre l'anglais aujourd'hui"
+  },
+  "explore": {
+    "title": "Explorer",
+    "subtitle": "Découvrez de nouveaux contenus"
+  }
+}

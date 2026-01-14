@@ -1,0 +1,27 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "home": "Home",
+    "explore": "Explore",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "save": "Save",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "tabs": {
+    "home": "Home",
+    "explore": "Explore"
+  },
+  "home": {
+    "title": "Welcome to 3ich-english",
+    "subtitle": "Start learning English today"
+  },
+  "explore": {
+    "title": "Explore",
+    "subtitle": "Discover new content"
+  }
+}

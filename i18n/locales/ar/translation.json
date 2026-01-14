@@ -1,0 +1,27 @@
+{
+  "common": {
+    "welcome": "مرحبا",
+    "home": "الرئيسية",
+    "explore": "استكشف",
+    "settings": "الإعدادات",
+    "language": "اللغة",
+    "theme": "المظهر",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "ok": "موافق",
+    "yes": "نعم",
+    "no": "لا"
+  },
+  "tabs": {
+    "home": "الرئيسية",
+    "explore": "استكشف"
+  },
+  "home": {
+    "title": "مرحبا بك في 3ich-english",
+    "subtitle": "ابدأ تعلم الإنجليزية اليوم"
+  },
+  "explore": {
+    "title": "استكشف",
+    "subtitle": "اكتشف محتوى جديد"
+  }
+}
