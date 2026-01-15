@@ -5,14 +5,15 @@ import ParallaxScrollView from '@/components/layout/parallax-scroll-view';
 import { LanguageSelector } from '@/components/ui/language-selector';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
 import { ThemedText } from '@/components/ui/themed-text';
+import { useTheme } from '@/hooks/use-theme';
 import { useTranslation } from '@/hooks/use-translation';
 
 export default function HomeScreen() {
   const { t } = useTranslation();
-
+  const { colors } = useTheme();
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#FE6665', dark: '#FE6665' }}
+      headerBackgroundColor={{ light: colors.primary, dark: colors.primary }}
       headerImage={
         <Image
           source={require('@/assets/images/splash-icon.png')}

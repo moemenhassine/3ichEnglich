@@ -33,15 +33,15 @@ export function ThemeSwitcher() {
               style={[
                 styles.themeButton,
                 {
-                  backgroundColor: isActive ? colors.tint : colors.backgroundTertiary,
-                  borderColor: isActive ? colors.tint : colors.border,
+                  backgroundColor: isActive ? colors.primary : colors.cardBackground,
+                  borderColor: isActive ? colors.primary : colors.border,
                 },
               ]}
               onPress={() => setThemeMode(option.mode)}>
               <IconSymbol
                 name={option.icon as IconSymbolName}
                 size={20}
-                color={isActive ? '#FFFFFF' : colors.icon}
+                color={isActive ? '#FFFFFF' : colors.text.primary}
               />
               <ThemedText
                 style={[

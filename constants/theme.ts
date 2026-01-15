@@ -7,82 +7,64 @@
 import { Platform } from 'react-native';
 
 // Primary colors - customize these according to your brand
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#4A9EFF';
 
 // Extended color palette for light theme
 export const Colors = {
   light: {
+    primary: "#FE6665",
+    primaryVariant: "#FF8E94",
+    secondary: "#44DBE5",
+    secondaryVariant: "#FFFFFF",
+    tertiary: "#E2F050",
+    tertiaryVariant: "#FFFFFF",
+    background: "#FFFFFF",
+    cardBackground: "#F2F9FF",
+    border: "#687076",
+    danger: "#ED1C24",
+
+    toast:{
+      success: "#16A34A99",
+      error: "#BF000399",
+      warning: "#FFA91D",
+      info: "#0000FF",
+    },
+    
+
     // Text colors
-    text: '#11181C',
-    textSecondary: '#687076',
-    textTertiary: '#9BA1A6',
-    
-    // Background colors
-    background: '#FFFFFF',
-    backgroundSecondary: '#F5F5F7',
-    backgroundTertiary: '#E5E5EA',
-    
-    // Accent colors
-    tint: tintColorLight,
-    tintSecondary: '#0D8BC4',
-    tintTertiary: '#0B6A8A',
-    
-    // UI element colors
-    icon: '#687076',
-    iconSecondary: '#9BA1A6',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-    
-    // Border and divider colors
-    border: '#E5E5EA',
-    divider: '#D1D1D6',
-    
-    // Status colors
-    success: '#34C759',
-    warning: '#FF9500',
-    error: '#FF3B30',
-    info: tintColorLight,
-    
+    text:{
+      primary: "#132A4C",
+      secondary: "#687076",
+      tertiary: "#9BA1A6",
+    },
+
     // Card and surface colors
-    card: '#FFFFFF',
-    cardBackground: '#F9F9F9',
   },
   dark: {
     // Text colors
-    text: '#ECEDEE',
-    textSecondary: '#9BA1A6',
-    textTertiary: '#687076',
+    primary: "#FE6665",
+    primaryVariant: "#FF8E94",
+    secondary: "#44DBE5",
+    secondaryVariant: "#FEF2F2",
+    tertiary: "#E2F050",
+    tertiaryVariant: "#FFFFFF",
+    background: "#132A4C",
+    cardBackground: "#1D3962",
+    border: "#FFFFFF",
+    danger: "#ED1C24",
     
-    // Background colors
-    background: '#000000',
-    backgroundSecondary: '#1C1C1E',
-    backgroundTertiary: '#2C2C2E',
-    
-    // Accent colors
-    tint: tintColorDark,
-    tintSecondary: '#6BB3FF',
-    tintTertiary: '#8CC8FF',
-    
-    // UI element colors
-    icon: '#9BA1A6',
-    iconSecondary: '#687076',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-    
-    // Border and divider colors
-    border: '#38383A',
-    divider: '#48484A',
-    
-    // Status colors
-    success: '#30D158',
-    warning: '#FF9F0A',
-    error: '#FF453A',
-    info: tintColorDark,
-    
-    // Card and surface colors
-    card: '#1C1C1E',
-    cardBackground: '#2C2C2E',
+    toast:{
+      success: "#16A34A99",
+      error: "#BF000399",
+      warning: "#FFA91D",
+      warningVariant: "#F3CD36",
+    },
+
+    // Text colors
+    text:{
+      primary: "#FFFFFF",
+      secondary: "#E9EAED",
+      tertiary: "#D7D9E0",
+    },
   },
 };
 

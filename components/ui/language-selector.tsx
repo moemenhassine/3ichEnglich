@@ -27,8 +27,8 @@ export function LanguageSelector() {
             style={[
               styles.languageButton,
               {
-                backgroundColor: language === lang.code ? colors.tint : colors.backgroundTertiary,
-                borderColor: language === lang.code ? colors.tint : colors.border,
+                backgroundColor: language === lang.code ? colors.primary : colors.cardBackground,
+                borderColor: language === lang.code ? colors.primary : colors.border,
               },
             ]}
             onPress={() => changeLanguage(lang.code)}>
