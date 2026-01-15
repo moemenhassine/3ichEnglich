@@ -1,4 +1,4 @@
-import { ImageBackground, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { ThemedText } from '@/components/ui/themed-text';
 import { useTheme } from '@/hooks/use-theme';
@@ -9,17 +9,14 @@ export default function SpeakingScreen() {
     const { colors } = useTheme();
 
     return (
-        <ImageBackground
-            source={require('@/assets/backgroundImage/bg.jpg')}
-            style={styles.backgroundImage}
-            resizeMode="cover">
-            <View style={[styles.overlay, { backgroundColor: colors.background + '80' }]}>
-                <View style={styles.container}>
-                    <ThemedText type="title">Speaking</ThemedText>
-                    <ThemedText type="subtitle">Practice your speaking skills</ThemedText>
-                </View>
+
+        <View style={[styles.overlay, { backgroundColor: colors.background }]}>
+            <View style={styles.container}>
+                <ThemedText type="title">Speaking</ThemedText>
+                <ThemedText type="subtitle">Practice your speaking skills</ThemedText>
             </View>
-        </ImageBackground>
+        </View>
+
     );
 }
 

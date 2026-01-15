@@ -1,8 +1,6 @@
-import { Image } from 'expo-image';
 import { StyleSheet, View } from 'react-native';
 
 import BackButton from '@/assets/icons/svg/back';
-import ParallaxScrollView from '@/components/layout/parallax-scroll-view';
 import { LanguageSelector } from '@/components/ui/language-selector';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
 import { ThemedText } from '@/components/ui/themed-text';
@@ -13,32 +11,26 @@ export default function HomeScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: colors.primary, dark: colors.primary }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/splash-icon.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <View style={styles.container}>
-        <BackButton width={18} height={14} gradientStartColor="#FF4747" gradientEndColor="#44DBE5" />
-        <ThemedText type="title">{t('home.title')}</ThemedText>
-        <ThemedText type="subtitle">{t('home.subtitle')}</ThemedText>
-        <View style={styles.settingsSection}>
-          <LanguageSelector />
-          <View style={styles.themeSection}>
-            <ThemeSwitcher />
-          </View>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
+      <BackButton width={18} height={14} gradientStartColor="#FF4747" gradientEndColor="#44DBE5" />
+      <ThemedText type="title">{t('home.title')}</ThemedText>
+      <ThemedText type="subtitle">{t('home.subtitle')}</ThemedText>
+      <View style={styles.settingsSection}>
+        <LanguageSelector />
+        <View style={styles.themeSection}>
+          <ThemeSwitcher />
         </View>
       </View>
-    </ParallaxScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    padding: 20,
     gap: 16,
+    paddingTop: 100,
   },
   titleContainer: {
     flexDirection: 'row',
