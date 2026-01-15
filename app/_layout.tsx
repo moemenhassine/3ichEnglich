@@ -21,7 +21,7 @@ function AppContent() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
       </Stack>
-      <StatusBar style={theme === 'dark' ? 'light' : 'dark'} />
+      <StatusBar style={theme === 'dark' ? 'light' : 'dark'} animated={true} />
     </NavigationThemeProvider>
   );
 }

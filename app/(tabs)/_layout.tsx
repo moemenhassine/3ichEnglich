@@ -2,6 +2,7 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
 
+import FullHomeIcon from '@/assets/icons/svg/tabs/fullHome';
 import { HapticTab } from '@/components/ui/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { useTheme } from '@/hooks/use-theme';
@@ -55,11 +56,13 @@ export default function TabLayout() {
         name="index"
         options={{
           title: t('tabs.home'),
-          tabBarIcon: ({ color, focused }) => (
-            <IconSymbol 
-              size={focused ? 28 : 24} 
-              name="house.fill" 
-              color={color} 
+          tabBarIcon: ({ focused }) => (
+            <FullHomeIcon 
+              width={24} 
+              height={24} 
+              focused={focused}
+              gradientStartColor="#44DBE5" 
+              gradientEndColor="#FE6665" 
             />
           ),
         }}

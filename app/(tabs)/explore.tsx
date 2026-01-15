@@ -10,7 +10,7 @@ export default function TabTwoScreen() {
 
   return (
     <ImageBackground
-      source={require('@/assets/images/bg.jpg')}
+      source={require('@/assets/backgroundImage/bg.jpg')}
       style={styles.backgroundImage}
       resizeMode="cover">
       <View style={[styles.overlay, { backgroundColor: colors.background + '80' }]}>
