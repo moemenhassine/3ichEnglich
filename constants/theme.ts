@@ -22,25 +22,28 @@ export const Colors = {
     border: "#687076",
     danger: "#ED1C24",
 
-    toast:{
+    toast: {
       success: "#16A34A99",
       error: "#BF000399",
       warning: "#FFA91D",
       info: "#0000FF",
     },
-    
+
 
     // Text colors
-    text:{
+    text: {
       primary: "#132A4C",
       secondary: "#687076",
       tertiary: "#9BA1A6",
     },
+    Tabs: {
+      background: "#120101",
+      text: "#ffffffff",
+      activeText: "#44DBE5",
+    }
 
-    // Card and surface colors
   },
   dark: {
-    // Text colors
     primary: "#FE6665",
     primaryVariant: "#FF8E94",
     secondary: "#44DBE5",
@@ -51,8 +54,8 @@ export const Colors = {
     cardBackground: "#1D3962",
     border: "#FFFFFF",
     danger: "#ED1C24",
-    
-    toast:{
+
+    toast: {
       success: "#16A34A99",
       error: "#BF000399",
       warning: "#FFA91D",
@@ -60,11 +63,16 @@ export const Colors = {
     },
 
     // Text colors
-    text:{
+    text: {
       primary: "#FFFFFF",
       secondary: "#E9EAED",
       tertiary: "#D7D9E0",
     },
+    Tabs: {
+      background: "#132a4cd1",
+      text: "#FFFFFF",
+      activeText: "#44DBE5",
+    }
   },
 };
 

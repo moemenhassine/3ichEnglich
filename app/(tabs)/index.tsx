@@ -2,8 +2,6 @@ import { Image } from 'expo-image';
 import { StyleSheet, View } from 'react-native';
 
 import BackButton from '@/assets/icons/svg/back';
-import CloseIcon from '@/assets/icons/svg/close';
-import FullHomeIcon from '@/assets/icons/svg/tabs/fullHome';
 import ParallaxScrollView from '@/components/layout/parallax-scroll-view';
 import { LanguageSelector } from '@/components/ui/language-selector';
 import { ThemeSwitcher } from '@/components/ui/theme-switcher';
@@ -24,9 +22,7 @@ export default function HomeScreen() {
         />
       }>
       <View style={styles.container}>
-        <FullHomeIcon width={30} height={30} gradientStartColor="#44DBE5" gradientEndColor="#FE6665" />
         <BackButton width={18} height={14} gradientStartColor="#FF4747" gradientEndColor="#44DBE5" />
-        <CloseIcon color={colors.text.primary} size={24} />
         <ThemedText type="title">{t('home.title')}</ThemedText>
         <ThemedText type="subtitle">{t('home.subtitle')}</ThemedText>
         <View style={styles.settingsSection}>
@@ -67,6 +63,6 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
     resizeMode: 'contain',
-  
+
   },
 });

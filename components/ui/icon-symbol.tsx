@@ -21,6 +21,8 @@ const MAPPING = {
   'sun.max.fill': 'wb-sunny',
   'moon.fill': 'dark-mode',
   'gearshape.fill': 'settings',
+  'person.3.fill': 'groups',
+  'play.tv.fill': 'live-tv',
 } as IconMapping;
 
 /**

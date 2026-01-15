@@ -1,10 +1,13 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, Text } from 'react-native';
 
+import FullBurgerIcon from '@/assets/icons/svg/tabs/fullBurger';
+import FullCommunityIcon from '@/assets/icons/svg/tabs/fullCommunity';
 import FullHomeIcon from '@/assets/icons/svg/tabs/fullHome';
+import FullLiveIcon from '@/assets/icons/svg/tabs/fullLive';
+import FullSpeakingIcon from '@/assets/icons/svg/tabs/fullSpeaking';
 import { HapticTab } from '@/components/ui/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
 import { useTheme } from '@/hooks/use-theme';
 import { useTranslation } from '@/hooks/use-translation';
 
@@ -15,18 +18,14 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: colors.secondary,
-        tabBarInactiveTintColor: colors.text.secondary,
+        tabBarActiveTintColor: colors.Tabs.activeText,
+        tabBarInactiveTintColor: colors.Tabs.text,
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarStyle: {
-          backgroundColor: colors.background,
+          backgroundColor: colors.Tabs.background,
           borderTopWidth: 1,
           borderTopColor: colors.border,
-          borderTopRightRadius: 20,
-          borderTopLeftRadius: 20,
-          borderTopStartRadius: 20,
-          borderTopEndRadius: 20,
           height: Platform.OS === 'ios' ? 88 : 65,
           paddingBottom: Platform.OS === 'ios' ? 25 : 8,
           paddingTop: 8,
@@ -40,42 +39,86 @@ export default function TabLayout() {
           shadowRadius: 8,
           overflow: 'hidden',
         },
+        tabBarIconStyle: {
+          marginVertical: 6,
+        },
         tabBarLabelStyle: {
           fontSize: 12,
           fontWeight: '600',
-          marginTop: 4,
-        },
-        tabBarIconStyle: {
-          marginTop: 4,
-        },
-        tabBarItemStyle: {
-          paddingVertical: 4,
+          marginTop: 6,
         },
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: t('tabs.home'),
+          tabBarLabel: ({ focused, color }) => focused && <Text style={{ color, fontSize: 12, fontWeight: '600' }}>Home</Text>,
           tabBarIcon: ({ focused }) => (
-            <FullHomeIcon 
-              width={24} 
-              height={24} 
+            <FullHomeIcon
+              width={32}
+              height={32}
               focused={focused}
-              gradientStartColor="#44DBE5" 
-              gradientEndColor="#FE6665" 
+              gradientStartColor={focused ? "#44DBE5" : "#656565ff"}
+              gradientEndColor={focused ? "#FE6665" : "#FFFFFF"}
             />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="speaking"
         options={{
-          title: t('tabs.explore'),
-          tabBarIcon: ({ color, focused }) => (
-            <IconSymbol 
-              size={focused ? 28 : 24} 
-              name="paperplane.fill" 
-              color={color} 
+          tabBarLabel: ({ focused, color }) => focused && <Text style={{ color, fontSize: 12, fontWeight: '600' }}>Speaking</Text>,
+          tabBarIcon: ({ focused }) => (
+            <FullSpeakingIcon
+              width={32}
+              height={32}
+              focused={focused}
+              gradientStartColor={focused ? "#44DBE5" : "#656565ff"}
+              gradientEndColor={focused ? "#FE6665" : "#FFFFFF"}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="community"
+        options={{
+          tabBarLabel: ({ focused, color }) => focused && <Text style={{ color, fontSize: 12, fontWeight: '600' }}>Community</Text>,
+          tabBarIcon: ({ focused }) => (
+            <FullCommunityIcon
+              width={32}
+              height={32}
+              focused={focused}
+              gradientStartColor={focused ? "#44DBE5" : "#656565ff"}
+              gradientEndColor={focused ? "#FE6665" : "#FFFFFF"}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="live"
+        options={{
+          tabBarLabel: ({ focused, color }) => focused ? <Text style={{ color, fontSize: 12, fontWeight: '600' }}>Live</Text> : null,
+          tabBarIcon: ({ focused }) => (
+            <FullLiveIcon
+              width={32}
+              height={32}
+              focused={focused}
+              gradientStartColor={focused ? "#44DBE5" : "#656565ff"}
+              gradientEndColor={focused ? "#FE6665" : "#FFFFFF"}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="menu"
+        options={{
+          tabBarLabel: ({ focused, color }) => focused ? <Text style={{ color, fontSize: 12, fontWeight: '600' }}>Menu</Text> : null,
+          tabBarIcon: ({ focused }) => (
+            <FullBurgerIcon
+              width={32}
+              height={32}
+              focused={focused}
+              gradientStartColor={focused ? "#44DBE5" : "#656565ff"}
+              gradientEndColor={focused ? "#FE6665" : "#FFFFFF"}
             />
           ),
         }}
